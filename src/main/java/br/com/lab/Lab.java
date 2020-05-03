@@ -13,11 +13,13 @@ public class Lab {
 
 	@GetMapping("/test")
 	public String lab() {
+		System.out.println("Lab log: " + new Date());
 		return "Lab: " + new Date(); 
 	}
 	
 	@GetMapping("/")
 	public String code(@RequestParam("code") String code, @RequestParam("state") String state) {
+		System.out.println("Log: code: " + code + " - " + state);
 		return "code: " + code + " - " + state; 
 	}
 	
