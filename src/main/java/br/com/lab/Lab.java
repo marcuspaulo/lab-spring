@@ -17,8 +17,8 @@ public class Lab {
 	}
 	
 	@GetMapping("/")
-	public String code(@RequestParam("code") String code) {
-		return "code: " + code; 
+	public String code(@RequestParam("code") String code, @RequestParam("state") String state) {
+		return "code: " + code + " - " + state; 
 	}
 	
 }
